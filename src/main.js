@@ -356,13 +356,14 @@ const createLoadButton = () => {
 };
 
 const renderElement = (place, template) => {
-  document.querySelector(place).insertAdjacentHTML('beforeend', template);
+  document.querySelector(place).insertAdjacentHTML(`beforeend`, template);
 };
 
-renderElement('.main__control', createMenu());
-renderElement('.main', createSorter());
-renderElement('.board__tasks', createCardForm())
+renderElement(`.main__control`, createMenu());
+renderElement(`.main`, createFilter());
+renderElement(`.main`, createSorter());
+renderElement(`.board__tasks`, createCardForm());
 for (let i = 0; i < TASK_AMOUNT; i++) {
-  renderElement('.board__tasks', createCardTemplate());
-};
-renderElement('.board', createLoadButton());
+  renderElement(`.board__tasks`, createCardTemplate());
+}
+renderElement(`.board`, createLoadButton());

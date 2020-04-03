@@ -2,7 +2,7 @@
 
 const TASK_AMOUNT = 3;
 
-const createMenu = () => {
+const createMenuTemplate = () => {
   return `<section class="control__btn-wrap">
     <input
       type="radio"
@@ -33,7 +33,7 @@ const createMenu = () => {
   </section>`;
 };
 
-const createFilter = () => {
+const createFiltersTemplate = () => {
   return `<section class="main__filter filter container">
       <input
         type="radio"
@@ -95,15 +95,12 @@ const createFilter = () => {
     </section>`;
 };
 
-const createSorter = () => {
-  return `<section class="board container">
-      <div class="board__filter-list">
+const createSorterTemplate = () => {
+  return `
         <a href="#" class="board__filter" data-sort-type="default">SORT BY DEFAULT</a>
         <a href="#" class="board__filter" data-sort-type="date-up">SORT BY DATE up</a>
         <a href="#" class="board__filter" data-sort-type="date-down">SORT BY DATE down</a>
-      </div>
-      <div class="board__tasks"></div>
-    </section>`;
+      `;
 };
 
 const createCardTemplate = () => {
@@ -152,7 +149,7 @@ const createCardTemplate = () => {
   </article>`;
 };
 
-const createCardForm = () => {
+const createCardFormTemplate = () => {
   return `<article class="card card--edit card--black">
     <form class="card__form" method="get">
       <div class="card__inner">
@@ -351,19 +348,19 @@ const createCardForm = () => {
   </article>`;
 };
 
-const createLoadButton = () => {
+const createLoadButtonTemplate = () => {
   return `<button class="load-more" type="button">load more</button>`;
 };
 
-const renderElement = (place, template) => {
-  document.querySelector(place).insertAdjacentHTML(`beforeend`, template);
+const renderElement = (place, template, position) => {
+  document.querySelector(place).insertAdjacentHTML(position, template);
 };
 
-renderElement(`.main__control`, createMenu());
-renderElement(`.main`, createFilter());
-renderElement(`.main`, createSorter());
-renderElement(`.board__tasks`, createCardForm());
+renderElement(`.main__control`, createMenuTemplate(), `beforeend`);
+renderElement(`.main__filter`, createFiltersTemplate(), `beforeend`);
+renderElement(`.board__filter-list`, createSorterTemplate(), `beforeend`);
 for (let i = 0; i < TASK_AMOUNT; i++) {
-  renderElement(`.board__tasks`, createCardTemplate());
+  renderElement(`.board__tasks`, createCardTemplate(), `beforeend`);
 }
-renderElement(`.board`, createLoadButton());
+renderElement(`.board`, createLoadButtonTemplate(), `beforeend`);
+renderElement(`body`, createCardFormTemplate(), `beforeend`);

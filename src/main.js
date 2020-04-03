@@ -366,4 +366,3 @@ for (let i = 0; i < TASK_NUMBER; i++) {
   renderElement(`.board__tasks`, createCardTemplate(), `beforeend`);
 }
 renderElement(`.board`, createLoadButtonTemplate(), `beforeend`);
-renderElement(`body`, createCardFormTemplate(), `beforeend`);

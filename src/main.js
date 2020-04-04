@@ -1,8 +1,8 @@
 import {createMenuTemplate} from "./component/menu.js";
 import {createFiltersTemplate} from "./component/filters.js";
 import {createSorterTemplate} from "./component/sorter.js";
-import {createCardTemplate} from "./component/film-card.js";
-import {createCardFormTemplate} from "./component/film-form.js";
+import {createCardTemplate} from "./component/task-card.js";
+import {createCardFormTemplate} from "./component/task-form.js";
 import {createLoadButtonTemplate} from "./component/load-button.js";
 
 const TASK_NUMBER = 3;

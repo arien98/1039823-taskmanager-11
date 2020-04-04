@@ -362,6 +362,7 @@ const renderElement = (place, template, position) => {
 renderElement(`.main__control`, createMenuTemplate(), `beforeend`);
 renderElement(`.main__filter`, createFiltersTemplate(), `beforeend`);
 renderElement(`.board__filter-list`, createSorterTemplate(), `beforeend`);
+renderElement(`.board__tasks`, createCardFormTemplate(), `beforeend`);
 for (let i = 0; i < TASK_NUMBER; i++) {
   renderElement(`.board__tasks`, createCardTemplate(), `beforeend`);
 }

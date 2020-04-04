@@ -1,9 +1,9 @@
-import {createMenuTemplate} from "./component/menu.js";
-import {createFiltersTemplate} from "./component/filters.js";
-import {createSorterTemplate} from "./component/sorter.js";
-import {createCardTemplate} from "./component/task-card.js";
-import {createCardFormTemplate} from "./component/task-form.js";
-import {createLoadButtonTemplate} from "./component/load-button.js";
+import {createMenuTemplate} from "./components/menu.js";
+import {createFiltersTemplate} from "./components/filters.js";
+import {createSorterTemplate} from "./components/sorter.js";
+import {createCardTemplate} from "./components/task-card.js";
+import {createCardFormTemplate} from "./components/task-form.js";
+import {createLoadButtonTemplate} from "./components/load-button.js";
 
 const TASK_NUMBER = 3;
 

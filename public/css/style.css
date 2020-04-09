@@ -141,6 +141,7 @@ body {
 }
 .filter__input:disabled + .filter__label {
   color: #e7e3e3;
+  cursor: default;
 }
 
 .board__filter-list {

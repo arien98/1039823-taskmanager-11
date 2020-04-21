@@ -48,7 +48,7 @@ const generateTask = () => {
   return {
     description: getRandomArrayItem(DESCRIPTION_ITEMS),
     dueDate,
-    repeatingDays: generateRepeatingDays(),
+    repeatingDays: dueDate ? DEFAULT_REPEATING_DAYS : generateRepeatingDays(),
     color: getRandomArrayItem(COLORS),
     isArchive: Math.random() > 0.5,
     isFavorite: Math.random() > 0.5
